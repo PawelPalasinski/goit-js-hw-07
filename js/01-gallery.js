@@ -10,13 +10,8 @@ gallery.insertAdjacentHTML(
   galleryItems
     .map(
       (galleryItem) =>
-        `<div class="gallery__image"><img src="${galleryItem.preview}" alt= "${galleryItem.alt}" width="340"></div>`
+        `<div class="gallery__image"><a href="${galleryItem.original}"><img src="${galleryItem.preview}" alt= "${galleryItem.description}" width="340"></a></div>`
     )
     .join("")
 );
-
-for (let i = 0; i < galleryItems.length+1; i++) {
-  let item = document.querySelectorAll("div");
-  item[i].style.margin = "10px";
-};
 
