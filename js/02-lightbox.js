@@ -8,16 +8,21 @@ const gallery = document.querySelector(".gallery");
 // adding all images from gallery-items.js to element with class .gallery in HTML
 
 gallery.insertAdjacentHTML(
-  "beforeend",
+  "afterbegin",
   galleryItems
     .map(
       (galleryItem) =>
-        `<li class="gallery__item">
-        <a clss="gallery__link" href="${galleryItem.original}">
+        `<a class="gallery__item" href="${galleryItem.original}">
         <img class="gallery__image"
         src="${galleryItem.preview}" 
-        data-source="${galleryItem.original}"
-        alt= "${galleryItem.description}"></a></li>`
+        alt= "${galleryItem.description}"></a>`
     )
     .join("")
 );
+
+// SimpleLightbox
+
+let lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
