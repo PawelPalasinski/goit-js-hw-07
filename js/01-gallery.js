@@ -21,6 +21,7 @@ gallery.insertAdjacentHTML(
 );
 
 // basicLightbox event after clicking an image from gallery
+
 gallery.addEventListener("click", selectedImage);
 
 function selectedImage(e) {
@@ -33,6 +34,7 @@ function selectedImage(e) {
   instance.show();
 
   // close modal with ESC
+    
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") instance.close();
   });
