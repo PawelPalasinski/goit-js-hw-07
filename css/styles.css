@@ -24,6 +24,13 @@
 
 .gallery__image:hover {
   transform: scale(1.03);
+  filter: grayscale(100%);
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
 }
 
 .gallery__image {
