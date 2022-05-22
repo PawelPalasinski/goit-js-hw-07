@@ -3,6 +3,8 @@ import { galleryItems } from './gallery-items.js';
 
 // ADD ALL IMAGES
 
+// reference to the element that holds the gallery
+
 const gallery = document.querySelector(".gallery");
 
 // adding all images from gallery-items.js to element with class .gallery in HTML
@@ -20,9 +22,10 @@ gallery.insertAdjacentHTML(
     .join("")
 );
 
-// SimpleLightbox
+// SimpleLightbox - https://simplelightbox.com
 
 let lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
+
 });

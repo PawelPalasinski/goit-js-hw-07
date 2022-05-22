@@ -1,6 +1,8 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
+// reference to the element that holds the gallery
+
 const gallery = document.querySelector(".gallery");
 
 // adding all images from gallery-items.js to element with class .gallery in HTML
@@ -20,7 +22,7 @@ gallery.insertAdjacentHTML(
     .join("")
 );
 
-// basicLightbox event after clicking an image from gallery
+// basicLightbox (https://basiclightbox.electerious.com) event after clicking an image from gallery
 
 gallery.addEventListener("click", selectedImage);
 
